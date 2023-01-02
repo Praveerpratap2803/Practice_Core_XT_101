@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add a Workshop | Workshops App</title>
+        
+        <link rel="stylesheet" href="external/fontawesome-free-6.1.2-web/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="external/css/normalize.css">
+        <link rel="stylesheet" href="css/utils.css">
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/nav.css">
+        <link rel="stylesheet" href="css/social-media.css">
+        <link rel="stylesheet" href="css/pages/add-workshop.css">
+
+        <!-- no defer here - we want to execute this before anyhthing shows up on the page -->
+        <script src="./js/check-login.js"></script>
+
+        <script defer src="js/nav.js"></script>
+        <script defer src="js/services/auth.js"></script>
+        <script defer src="js/services/workshops.js"></script>
+        <script defer src="js/pages/add-workshop.js"></script>
+    </head>
+    <body>
+        <nav class="main-menu">
+            <div class="d-sm-none left-nav">
+                <ul class="nav list-unstyled">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="workshops-list.html" class="active">List of workshops</a></li>
+                    <li><a href="add-workshop.html">Add a workshop</a></li>
+                    <li><a href="login.html" id="btn-logout">Logout</a></li>
+                </ul>
+            </div>
+            <div class="d-lg-none right-nav">
+                <ul class="nav list-unstyled">
+                    <li class="text-right">
+                        <button class="menu-toggler">Menu</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="social-media-links">
+            <div>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+            <div>
+                <i class="fa-brands fa-facebook-f"></i>
+            </div>
+            <div>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        </div>
+
+        <main class="container my-3">
+            <section>
+                <h1>List of Workshops</h1>
+                <hr />
+                <form id="add-workshop-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea name="description" id="description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="startDate">Start date</label>
+                        <input type="date" name="startDate" id="startDate" />
+                    </div>
+                    <div class="form-group">
+                        <label for="endDate">End date</label>
+                        <input type="date" name="endDate" id="endDate" />
+                    </div>
+
+                    <button type="submit">Add workshop</button>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>

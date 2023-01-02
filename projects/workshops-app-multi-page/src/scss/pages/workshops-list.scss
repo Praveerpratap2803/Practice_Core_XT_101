@@ -1,0 +1,38 @@
+@use  '../utils';
+@use  '../app';
+@use  '../components/index.scss';
+@use '../mixins/utils' as mixinUtils;
+
+.workshops-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3em 2em;
+    margin: 1em 0;
+    @media ( min-width : 992px ) {
+        
+        grid-template-columns: repeat( 3, 1fr );
+        
+    }
+    .workshop {
+        border: 1px solid lightgray;
+        @include mixinUtils.border-radius(3px);
+        text-decoration: none;
+        color: initial;
+
+        &:hover {
+            box-shadow: 0px 0px 2px 2px rgba(217, 165, 32, 0.5 );
+        }
+    }
+    
+    
+    
+}
+
+
+/*
+@media ( min-width : 992px ) {
+    .workshops-list {
+        grid-template-columns: repeat( 3, 1fr );
+    }
+}
+*/

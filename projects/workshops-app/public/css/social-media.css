@@ -1,0 +1,11 @@
+.social-media-links {
+    position: fixed;
+    right: 0px;
+    top: 50%;
+    display: inline-block;
+}
+
+.social-media-links > * {
+    padding: 0.5em;
+    border: 1px solid black;
+}

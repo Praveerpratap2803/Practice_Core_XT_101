@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box ;
+}
+.btn{
+    margin: 10px ;   
+    display: inline;   
+}
+button{
+    background:none;
+	color: white;
+	border: none;	
+    border-radius: 5px;    
+}
+.bn,
+.bnn
+{      
+    border-radius: 4px;
+    padding: 10px;
+    background-color: navy;
+}
+.bn:hover,
+.bnn:hover
+{  
+    background-color: blue;
+}
+.ogg,
+.oggg 
+{
+    border-radius: 4px;
+    padding: 10px;
+    background-color: olive;
+}
+.ogg:hover,
+.oggg:hover{  
+    background-color: darkolivegreen;
+}
+.d,
+.dd {
+    border-radius: 4px;
+    padding: 10px;
+    background-color: crimson;
+}
+.d:hover,
+.dd:hover{   
+    background-color: darkred;
+}
+
+
+

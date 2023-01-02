@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [id="email" ]{
+            border: none;
+            color: blue;
+            
+        }
+        [id= "tele"]{
+            border: none;
+            color: blue;
+        }
+        .required{
+            color: red;
+        }
+        .form-group {
+            margin: 1em; /* 1em = 16px */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <a href="Home_1.html">Home</a>
+            <a href="Portfolio_1.html">Portfolio</a>
+            <a href="Contact_1.html">Contact</a>
+        </ul>
+    </nav>
+    <form action="HTML/Success.html">
+    <h2>Contact Us</h2>
+    
+    
+    <div class="form-group">
+        <label for="phone">Phone :</label>
+        <input type="tel" 
+        id="tele" 
+        name="Telephone"
+        autocomplete="on"
+        autofocus
+        />
+    </div>
+    
+    <div class="form-group">
+        <label>Email :</label>
+        <input type="email" 
+        id="email" 
+        name="email"
+        />
+    </div class="form-group">
+     <h2>Drop a message</h2>
+     <p>Please drop a message by filling out this form and we will get back to you in 2 days</p>
+    <div class="form-group">
+        <p>Field marked with <span class="required">*</span> are required</p>
+        <label for="name">Your Name</label>
+        <span class="required">*</span><br>
+        <input type="text"
+        id="name"
+        name="name"
+        placeholder="John Doe"
+        >
+    </div>
+    <div class="form-group">
+        <label for="email">Your Email</label>
+        <span class="required">*</span><br>
+        <input type="email"
+        id="email1"
+        name="email"
+        placeholder="john.doe@example.com"
+        pattern="[A-Za-z0-9]+@example.com$"
+        >
+    </div>
+    <div class="form-group">
+        <label for="build">What are you looking to build</label>
+        <span class="required">*</span><br>
+        <select id="build" name="build">
+            <option value="">-- Choose one --</option>
+            <option value="blog">blog</option>
+            <option value="online store">online store</option>
+            <option value="game">game</option>
+            <option value="other">other</option>
+        </select>
+        
+        
+        
+    </div>
+    <div class="form-group">
+        
+            Platform you plan to support
+            <span class="required">*</span><br>
+            <label>
+                <input type="checkbox" value="w" name="platform" />
+                Web
+            </label>
+            <label>
+                <input type="checkbox" value="m" name="platform" />
+                Mobile
+            </label>
+            <label>
+                <input type="checkbox" value="d" name="platform" />
+                Desktop
+            </label>
+        
+    </div>
+    <div class="form-group">
+        <label for="Message">Message</label>
+        <br>
+        <textarea id="msg"
+        name="message"></textarea>
+    </div>
+
+    <button type="submit"  class="form-group">Reset</button>
+    <button type="reset"  class="form-group">Send Message</button>
+    </form>
+    <hr>
+    <footer>&copy; example.com</footer>
+    
+</body>
+</html>

@@ -1,0 +1,14 @@
+.home-card {
+    padding: 2em;
+    border-radius: 5px;
+    font-size: 1.5em;
+    background-color: rgb( 233, 236, 239 );
+}
+
+.home-card h1 {
+    font-size: 3em;
+}
+
+.home-card p {
+    font-weight: 300;
+}

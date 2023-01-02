@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Workshops App</title>
+        
+        <link rel="stylesheet" href="external/fontawesome-free-6.1.2-web/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="external/css/normalize.css">
+        <link rel="stylesheet" href="css/pages/index.css">
+        <link rel="stylesheet" href="css/pages/workshops-list.css">
+        <link rel="stylesheet" href="css/pages/add-workshop.css">
+
+        <link rel="stylesheet" href="css/pages/index.css">
+
+        <script src="dist/js/main.bundle.js" defer></script>
+    </head>
+    <body>
+        <div id="root"></div>
+
+        <template id="login">
+            <main class="container">
+                <section class="home-card my-3">
+                    <h1>Login</h1>
+                    <hr />
+                    <form action="http://localhost:3000/login" method="post" id="login-form">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" value="john.doe@example.com" />
+                        
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" value="Password123#" />
+    
+                        <button type="submit">Login</button>
+                    </form>
+                </section>
+            </main>
+        </template>
+
+        <template id="home">
+                <nav class="main-menu">
+                <div class="d-sm-none left-nav">
+                    <ul class="nav list-unstyled">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="workshops-list.html">List of workshops</a></li>
+                        <li><a href="add-workshop.html">Add a workshop</a></li>
+                        <li><a href="login.html" id="btn-logout">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="d-lg-none right-nav">
+                    <ul class="nav list-unstyled">
+                        <li class="text-right">
+                            <button class="menu-toggler">
+                                <i class="fa-solid fa-bars"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="social-media-links">
+                <div>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div>
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+
+            <main class="container">
+                <section class="home-card my-3">
+                    <h1>Workshops App</h1>
+                    <hr />
+                    <p>
+                        The Workshops application serves details of (fictitious) technical workshops happening in various cities. Every workshop has a broad topic (eg. JavaScript), and a workshop has many sessions (each session covers a sub-topic, eg. Closures in JavaScript).
+                    </p>
+                    <p>
+                        You can view a list of workshops, details of every workshop, sessions in a workshop, and also add a new session for a workshop.
+                    </p>
+                </section>
+            </main>
+        </template>
+
+        <template id="workshops-list">
+            <nav class="main-menu">
+                <div class="d-sm-none left-nav">
+                    <ul class="nav list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="workshops-list.html" class="active">List of workshops</a></li>
+                        <li><a href="add-workshop.html">Add a workshop</a></li>
+                        <li><a href="login.html" id="btn-logout">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="d-lg-none right-nav">
+                    <ul class="nav list-unstyled">
+                        <li class="text-right">
+                            <button class="menu-toggler">Menu</button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+    
+            <div class="social-media-links">
+                <div>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div>
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+    
+            <main class="container my-3">
+                <section>
+                    <h1>List of Workshops</h1>
+                    <hr />
+                    <input type="search" class="search" id="search-workshops" />
+                    <div class=" message-info hide"></div>
+                    <div class=" message-error hide"></div>
+                    <div class="workshops-list"></div>
+                </section>
+            </main>
+        </template>
+
+        
+        <template id="add-workshop">
+            <nav class="main-menu">
+                <div class="d-sm-none left-nav">
+                    <ul class="nav list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="workshops-list.html" >List of workshops</a></li>
+                        <li><a href="add-workshop.html" class="active">Add a workshop</a></li>
+                        <li><a href="login.html" id="btn-logout">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="d-lg-none right-nav">
+                    <ul class="nav list-unstyled">
+                        <li class="text-right">
+                            <button class="menu-toggler">Menu</button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+    
+            <div class="social-media-links">
+                <div>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div>
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+    
+            <main class="container my-3">
+                <section>
+                    <h1>List of Workshops</h1>
+                    <hr />
+                    <form id="add-workshop-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" />
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea name="description" id="description"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="startDate">Start date</label>
+                            <input type="date" name="startDate" id="startDate" />
+                        </div>
+                        <div class="form-group">
+                            <label for="endDate">End date</label>
+                            <input type="date" name="endDate" id="endDate" />
+                        </div>
+    
+                        <button type="submit">Add workshop</button>
+                    </form>
+                </section>
+            </main>
+        </template>
+
+        <template id="page-not-found">
+            <h1>Page not found</h1>
+            <hr />
+            Try going <a href="/index.html">Home</a>
+        </template>
+
+    </body>
+</html>

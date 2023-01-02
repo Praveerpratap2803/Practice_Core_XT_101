@@ -1,0 +1,12 @@
+.form-group {
+    display: flex;
+    margin: 0.5em auto;
+}
+
+.form-group label {
+    flex-basis: 20%;
+}
+
+.form-group input {
+    flex-basis: auto;
+}

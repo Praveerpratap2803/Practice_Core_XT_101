@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Workshops App</title>
+        
+        <link rel="stylesheet" href="external/fontawesome-free-6.1.2-web/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="external/css/normalize.css">
+
+        <link rel="stylesheet" href="css/pages/index.css">
+
+        <script src="dist/js/index.bundle.js" defer></script>
+    </head>
+    <body>
+        <nav class="main-menu">
+            <div class="d-sm-none left-nav">
+                <ul class="nav list-unstyled">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="workshops-list.html">List of workshops</a></li>
+                    <li><a href="add-workshop.html">Add a workshop</a></li>
+                    <li><a href="login.html" id="btn-logout">Logout</a></li>
+                </ul>
+            </div>
+            <div class="d-lg-none right-nav">
+                <ul class="nav list-unstyled">
+                    <li class="text-right">
+                        <button class="menu-toggler">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="social-media-links">
+            <div>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+            <div>
+                <i class="fa-brands fa-facebook-f"></i>
+            </div>
+            <div>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        </div>
+
+        <main class="container">
+            <section class="home-card my-3">
+                <h1>Workshops App</h1>
+                <hr />
+                <p>
+                    The Workshops application serves details of (fictitious) technical workshops happening in various cities. Every workshop has a broad topic (eg. JavaScript), and a workshop has many sessions (each session covers a sub-topic, eg. Closures in JavaScript).
+                </p>
+                <p>
+                    You can view a list of workshops, details of every workshop, sessions in a workshop, and also add a new session for a workshop.
+                </p>
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+//$nav-link-color: rgb( 64, 64, 64 );
+@use '../vars';
+@use '../vars' as v;
+@use 'sass:color';
+body {
+    margin-top: 80px;
+}
+
+.main-menu {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 1.5em;
+    background-color: rgb( 245, 245, 245 );
+    .right-nav {
+        width: 100%;
+    }
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+
+        > * {
+            flex-basis: 100%;
+            @media ( min-width: 992px ) {
+                
+                flex-basis: auto;
+                
+            }
+        }
+        a {
+            display: inline-block;
+            padding: 0.5em;
+            text-decoration: none;
+            color: rgb( 160, 160, 160 );
+
+            &:hover {
+                color: color.adjust(v.$nav-link-color , $blackness:20%);
+                
+            }
+            &:active{
+                color: color.adjust(v.$nav-link-color , $blackness:80%);
+
+            }
+            &.active {
+                color: color.adjust(v.$nav-link-color , $blackness:100%);
+            }
+
+        }
+
+        
+
+    }
+
+}
+

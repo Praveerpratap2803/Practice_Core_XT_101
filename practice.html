@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To-Do</title>
+        <style>
+            .container {
+                width: 80%;
+                max-width: 1280px;
+                margin: 0 auto;
+            }
+            .todo-list{
+                display: inline;
+                
+            }
+            .list-item{
+                border: 1px solid rgba(18, 1, 1, 0.2);
+                padding : 0.5em;
+            }
+            .todo-list .completed{
+                float: right;
+                padding:5px;
+                margin-right: 5px;
+            }
+            .list-item:nth-of-type(1){
+                margin-top: 1em;
+            }
+            .done-message{
+                background-color: green;
+            }
+            .not-done-message{
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Todo's List</h1>
+            <hr />
+            <button class="all">All</button>
+            <button class="done">Done</button>
+            <button class="Not-Done">Not Done</button>
+            <div class="todo-list"></div>
+        </div>
+        <script>
+            let todolist = [];
+            const btn1 = document.querySelector('.all');
+            const btn2 = document.querySelector('.done');
+            const btn3 = document.querySelector('.Not-Done');
+            const spaned = document.querySelectorAll('span')
+            
+            function showTodoList(list){
+                const todoList = document.querySelector('.todo-list');
+                let liststring = '';
+                list.forEach(function(listed){
+                    let work ;
+                    if(listed.completed === true){
+                        work = 'Done';
+                
+                    } else{
+                        work = 'Not Done';
+                        
+                    }
+                    liststring += `
+                        <div class="list-item">
+                            <div class="heading">${listed.title} <span class="completed">${work}</span></div>
+                            
+                        </div>
+                    `
+                });
+                todoList.innerHTML = liststring;
+            
+            }
+
+            
+
+            btn1.addEventListener('click',function(event){
+                showTodoList(todolist);
+            });
+            btn2.addEventListener('click',function(event){
+                const DoneWork = todolist.filter(function(list){
+                    return list.completed === true;
+                });
+                showTodoList(DoneWork);
+            });
+            btn3.addEventListener('click',function(event){
+                const DoneWork = todolist.filter(function(list){
+                    return list.completed === false;
+                });
+                showTodoList(DoneWork);
+            });
+
+            fetch('https://jsonplaceholder.typicode.com/todos')
+            .then(function(response){
+                return response.json();
+            }).then(function(list){
+                todolist = list;
+                showTodoList(list);
+            })
+        </script>
+    </body>
+</html>

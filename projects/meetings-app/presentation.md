@@ -1,0 +1,16 @@
+- Make careful note of the feedback - this will be added to an issue and tracked
+- Have 2 - 3 slide presentation
+- Name of the project and what it does (1 - 2 minutes)
+- Tech stack - HTML, CSS, JS
+    - Accessibility - semantic tags, labels, img have alt attribute
+    - SEO - similar things apply for SEO. Add a meta description tag
+    - Run every page through Lighthouse, and show screenshots
+- Run the application (4 minutes)
+    - Demonstrate from register -> login -> add meeting -> search meetings -> excuse/add attendee, teams -> list/add/excuse/add member
+    - Show the pages in mobile view using the responsive design tab of Chrome
+    - If posible open a page on Firefox/Edge additionally
+- Open the code (4 minutes)
+    - Explain folder structure
+    - Included prettify
+    - How Git has been used
+    - Explain code as per SME request

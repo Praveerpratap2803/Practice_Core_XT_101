@@ -1,0 +1,16 @@
+body {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+h1 {
+  font-weight: normal;
+  margin: 0;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid lightgray;
+}
+
+/*# sourceMappingURL=app.css.map */

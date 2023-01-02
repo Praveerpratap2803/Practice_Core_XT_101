@@ -1,0 +1,90 @@
+@use './mixins/utils';
+.container {
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.list-unstyled {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.message {
+    padding: 0.5em 1em;
+    border: 1px solid black;
+    @include utils.border-radius;
+    background-color: lightgray;
+}
+.message-info {
+    @extend .message;
+    border: 1px solid navy;
+    background-color: lightblue;
+    color: black;
+}
+.message-error {
+    @extend .message;
+    border: 1px solid red;
+    background-color: crimson;
+    color: white;
+}
+
+.btn-delete {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid black;
+    @include utils.border-radius;
+    margin: 0.5em 0;
+    font-size: 1.2em;
+    background-color: crimson;
+    color: ivory;
+    cursor: pointer;
+}
+
+.p-2 {
+    padding: 0.8em;
+}
+
+.p-3 {
+    padding: 1em;
+}
+
+.p-4 {
+    padding: 1.3em;
+}
+
+.my-3 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.img-fluid {
+    width: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+.d-sm-none {
+    display: none;
+}
+
+.d-lg-none {
+    display: auto;
+}
+
+@media ( min-width : 992px ) {
+    .d-sm-none {
+        display: block;
+    }
+
+    .d-lg-none {
+        display: none;
+    }
+}
